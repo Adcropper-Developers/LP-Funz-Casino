@@ -523,15 +523,48 @@ main {
 .offer {
   width: 12rem;
   position: absolute;
-  top: 15%;
-  left: 0%;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -170%);
+  z-index: 10;
+  animation: tada infinite 2.5s linear;
 }
 
-.offer2 {
-  width: 12rem;
-  position: absolute;
-  top: 40%;
-  left: 0%;
+@keyframes tada {
+    0%{
+        transform: translate(0%, -170%) scaleX(1) scaleY(1) scaleZ(1) rotateZ(0deg);
+        transform-origin:"center center";
+    }
+    10%{
+        transform: translate(0%, -170%) scaleX(0.9) scaleY(0.9) scaleZ(0.9) rotateZ(-3deg)
+    }
+    20%{
+        transform: translate(0%, -170%) scaleX(0.9) scaleY(0.9) scaleZ(0.9) rotateZ(-3deg)
+    }
+    30%{
+        transform: translate(0%, -170%) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(3deg)
+    }
+    40%{
+        transform: translate(0%, -170%) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(-3deg)
+    }
+    50%{
+        transform: translate(0%, -170%) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(3deg)
+    }
+    60%{
+        transform: translate(0%, -170%) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(-3deg)
+    }
+    70%{
+        transform: translate(0%, -170%) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(3deg)
+    }
+    80%{
+        transform: translate(0%, -170%) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(-3deg)
+    }
+    90%{
+        transform: translate(0%, -170%) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(3deg)
+    }
+    100%{
+        transform: translate(0%, -170%) scaleX(1) scaleY(1) scaleZ(1) rotateZ(0deg)
+    }
 }
 
 .success {
@@ -713,6 +746,7 @@ main {
   color: #7FEBFF;
   font-family: 'Montserrat', sans-serif;
 }
+
 .join span.pink {
   color: #E795FF;
   font-family: 'Montserrat', sans-serif;
@@ -987,17 +1021,19 @@ footer .container {
   font-weight: 400;
 }
 
-footer .social{
+footer .social {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-footer .social div{
+
+footer .social div {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-footer .social p{
+
+footer .social p {
   color: #67DAE2;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
@@ -1006,7 +1042,8 @@ footer .social p{
   letter-spacing: 0;
   text-transform: uppercase;
 }
-footer .social a svg{
+
+footer .social a svg {
   width: 1rem;
   height: 1rem;
   object-fit: cover;
@@ -1078,29 +1115,56 @@ footer .social a svg{
   .offer {
     position: fixed;
     width: 25vw;
+    top: 35%;
+    left: 2%;
     opacity: 0;
-    transform: translateY(40%);
+    transform: translate(0%, 40%);
     transition: 0.2s all;
     z-index: 10;
-        top: 25%;
   }
 
-  .offer2 {
-    position: fixed;
-    width: 25vw;
-    opacity: 0;
-    transform: translateY(50%);
-    transition: 0.2s all;
-    z-index: 10;
-    top: 50%;
-  }
-
-  .offer.show,
-  .offer2.show {
+  .offer.show {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translate(0%, 0%);
     transition: 0.2s all;
-  } 
+  }
+
+  @keyframes tada {
+    0%{
+        transform: translate(0%, 0%) scaleX(1) scaleY(1) scaleZ(1) rotateZ(0deg);
+        transform-origin:"center center";
+    }
+    10%{
+        transform: translate(0%, 0%) scaleX(0.9) scaleY(0.9) scaleZ(0.9) rotateZ(-3deg)
+    }
+    20%{
+        transform: translate(0%, 0%) scaleX(0.9) scaleY(0.9) scaleZ(0.9) rotateZ(-3deg)
+    }
+    30%{
+        transform: translate(0%, 0%) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(3deg)
+    }
+    40%{
+        transform: translate(0%, 0%) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(-3deg)
+    }
+    50%{
+        transform: translate(0%, 0%) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(3deg)
+    }
+    60%{
+        transform: translate(0%, 0%) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(-3deg)
+    }
+    70%{
+        transform: translate(0%, 0%) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(3deg)
+    }
+    80%{
+        transform: translate(0%, 0%) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(-3deg)
+    }
+    90%{
+        transform: translate(0%, 0%) scaleX(1.1) scaleY(1.1) scaleZ(1.1) rotateZ(3deg)
+    }
+    100%{
+        transform: translate(0%, 0%) scaleX(1) scaleY(1) scaleZ(1) rotateZ(0deg)
+    }
+}
 
   .logo {
     width: 14vw;
@@ -1594,19 +1658,23 @@ footer .social a svg{
   .footerMenu a {
     font-size: 2.5vw;
   }
-  footer .social{
+
+  footer .social {
     flex-direction: column;
     gap: 4vw;
     margin-bottom: 15vw;
   }
+
   footer .social a svg {
     width: 4rem;
     height: 4rem;
   }
-  footer .social p{
+
+  footer .social p {
     font-size: 2.5vw;
   }
-  footer .social div{
+
+  footer .social div {
     gap: 8vw;
   }
 }
@@ -1631,8 +1699,7 @@ footer .social a svg{
     width: 100%;
   }
 
-  .offer,
-  .offer2 {
+  .offer {
     width: 30vw;
   }
 
@@ -2132,19 +2199,23 @@ footer .social a svg{
   .footerMenu a {
     font-size: 3.5vw;
   }
-  footer .social{
+
+  footer .social {
     flex-direction: column;
     gap: 4vw;
     margin-bottom: 15vw;
   }
+
   footer .social a svg {
     width: 7rem;
     height: 7rem;
   }
-  footer .social p{
+
+  footer .social p {
     font-size: 3.5vw;
   }
-  footer .social div{
+
+  footer .social div {
     gap: 8vw;
   }
 }

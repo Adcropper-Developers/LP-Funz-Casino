@@ -1121,7 +1121,7 @@ footer .social a svg {
     opacity: 0;
     transform: translate(0%, 40%);
     transition: 0.2s all;
-      filter: drop-shadow(0px 0px 20vw #B44BC8) drop-shadow(0px 0px 10vw #B44BC8);
+      filter: drop-shadow(0px 0px 3vw #B44BC8) drop-shadow(0px 0px 1.5vw #B44BC8);
     z-index: 10;
   }
 

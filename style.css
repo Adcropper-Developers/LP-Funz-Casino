@@ -517,6 +517,21 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: start;
+  position: relative;
+}
+
+.offer {
+  width: 12rem;
+  position: absolute;
+  top: 15%;
+  left: 0%;
+}
+
+.offer2 {
+  width: 12rem;
+  position: absolute;
+  top: 40%;
+  left: 0%;
 }
 
 .success {
@@ -1060,6 +1075,33 @@ footer .social a svg{
     width: 100%;
   }
 
+  .offer {
+    position: fixed;
+    width: 25vw;
+    opacity: 0;
+    transform: translateY(40%);
+    transition: 0.2s all;
+    z-index: 10;
+        top: 25%;
+  }
+
+  .offer2 {
+    position: fixed;
+    width: 25vw;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: 0.2s all;
+    z-index: 10;
+    top: 50%;
+  }
+
+  .offer.show,
+  .offer2.show {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: 0.2s all;
+  } 
+
   .logo {
     width: 14vw;
     margin-top: 3vw;
@@ -1587,6 +1629,11 @@ footer .social a svg{
   .formPart,
   .assetPart {
     width: 100%;
+  }
+
+  .offer,
+  .offer2 {
+    width: 30vw;
   }
 
   .logo {

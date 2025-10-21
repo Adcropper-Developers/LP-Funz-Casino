@@ -67,3 +67,18 @@ window.addEventListener('resize', () => {
     document.removeEventListener('mousemove', handleMouseMove);
   }
 })
+
+const offer = document.querySelector('.offer');
+const offer2 = document.querySelector('.offer2');
+window.addEventListener('scroll', () => {
+    // Sayfanın üstünden ne kadar kaydırıldığını al
+  const scrollY = window.scrollY || window.pageYOffset;
+
+  if (scrollY >= 200) {
+    offer.classList.add('show');
+    offer2.classList.add('show');
+  } else {
+    offer.classList.remove('show');
+    offer2.classList.remove('show');
+  }
+});
